@@ -61,6 +61,12 @@ dependencies {
     // Retrofit + Gson
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+// OkHttp Logging (optional, for debugging)
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.51.1")
