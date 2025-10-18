@@ -21,6 +21,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 
     buildTypes {
@@ -44,15 +45,22 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    // Core
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.activity:activity-ktx:1.9.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.3.2")
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.6")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    // ConstraintLayout (correct version)
+    implementation("com.google.android.material:material:1.11.0")
 
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
@@ -61,11 +69,12 @@ dependencies {
     // Retrofit + Gson
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
-// OkHttp Logging (optional, for debugging)
+    // OkHttp Logging
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
 
     // Hilt
@@ -78,6 +87,11 @@ dependencies {
 
     // RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    // Testing
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.6")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
 kapt {

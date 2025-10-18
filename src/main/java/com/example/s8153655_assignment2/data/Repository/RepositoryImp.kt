@@ -9,15 +9,15 @@ import javax.inject.Singleton
 @Singleton
 class RepositoryImpl @Inject constructor(
     private val api: ApiService
-) : Repository() {
+) : Repository {
 
-    suspend fun login(username: String, password: String, location: String): String? {
+    override suspend fun login(username: String, password: String, location: String): String? {
         val body = mapOf("username" to username, "password" to password)
         val response = api.login(location, body)
         return if (response.isSuccessful) response.body()?.keypass else null
     }
 
-    suspend fun getDashboard(keypass: String): List<Entity>? {
+    override suspend fun getDashboard(keypass: String): List<Entity>? {
         val response = api.getDashboard(keypass)
         return if (response.isSuccessful) response.body()?.entities else null
     }
