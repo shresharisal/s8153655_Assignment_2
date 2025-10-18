@@ -1,4 +1,4 @@
-package com.example.data.model
+package com.example.s8153655_assignment2.data.model
 
 data class Entity(
     val property1: String,

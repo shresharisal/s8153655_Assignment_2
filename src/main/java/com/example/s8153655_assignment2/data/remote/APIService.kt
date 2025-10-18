@@ -1,9 +1,9 @@
-package com.example.data.remote
+package com.example.s8153655_assignment2.data.remote
 
 package com.example.app.data.remote
 
-import com.example.data.model.DashboardResponse
-import com.example.data.model.LoginResponse
+import com.example.s8153655_assignment2.data.model.DashboardResponse
+import com.example.s8153655_assignment2.data.model.LoginResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET

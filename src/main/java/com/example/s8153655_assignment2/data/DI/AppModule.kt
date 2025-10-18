@@ -1,6 +1,6 @@
-package com.example.data.DI
+package com.example.s8153655_assignment2.data.DI
 
-import com.example.data.remote.ApiService
+import com.example.s8153655_assignment2.data.remote.ApiService
 import dagger.Provides
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
